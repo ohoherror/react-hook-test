@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from '../images/logo.svg';
-import '../style/App.css';
+import { root } from "..";
 
-function App() {
+let lastState: any;
+
+function myUseState(initialState: any) {
+  lastState = lastState || initialState;
+  function setState(newState: any) {
+    lastState = newState;
+    render();
+  }
+  return [lastState, setState];
+}
+
+function render() {
+  root.render(<App />);
+}
+
+export default function App() {
+  const [useName, setUseName] = myUseState("xc");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <input onChange={(e) => setUseName(e.target.value)}></input>
+      {useName}
     </div>
   );
 }
-
-export default App;
