@@ -4,7 +4,7 @@ import "./style/index.css";
 import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 import RefDemo from "./views/Ref";
-import RefTree from "./views/RefTree";
+import MemoHandle from "./views/MemoHandle";
 
 export const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,7 +13,7 @@ export const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <RefTree></RefTree>
+    <MemoHandle></MemoHandle>
     {/* <RefDemo></RefDemo> */}
   </React.StrictMode>
 );
