@@ -4,7 +4,7 @@ import "./style/index.css";
 import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 import RefDemo from "./views/Ref";
-import MemoHandle from "./views/MemoHandle";
+import MemoHandle from "./views/CallbackHandle";
 
 export const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
