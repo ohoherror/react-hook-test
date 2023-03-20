@@ -2,17 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./style/index.css";
 import App from "./views/App";
-import reportWebVitals from "./reportWebVitals";
 import RefDemo from "./views/Ref";
+import reportWebVitals from "./reportWebVitals";
 import StorageHandle from "./views/StorageHandle";
-import {Provider} 
+import { Provider } from "react-redux";
+import store from "./store";
 
 export const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 root.render(
-  <Provider>
+  <Provider store={store}>
     {/* <App /> */}
     <StorageHandle></StorageHandle>
     {/* <RefDemo></RefDemo> */}
