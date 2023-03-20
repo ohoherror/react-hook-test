@@ -4,18 +4,19 @@ import "./style/index.css";
 import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
 import RefDemo from "./views/Ref";
-import MemoHandle from "./views/CallbackHandle";
+import StorageHandle from "./views/StorageHandle";
+import {Provider} 
 
 export const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 root.render(
-  <React.StrictMode>
+  <Provider>
     {/* <App /> */}
-    <MemoHandle></MemoHandle>
+    <StorageHandle></StorageHandle>
     {/* <RefDemo></RefDemo> */}
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
